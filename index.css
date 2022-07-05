@@ -1,0 +1,208 @@
+.initial-body-style{
+    background-color: #3b3b98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.after-body-style{
+    animation:chbg 5s
+}
+@keyframes chbg{
+    from{
+        background-color: rgb(58, 131, 214);
+    }
+    to{
+        background-color: #0c192c;
+    }
+}
+body{
+    background-color: #0c192c;
+}
+.bubble{
+    position: relative;
+    display: flex;
+}
+.main-div{
+    overflow: hidden;
+}
+.bubble span{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #4fc3dc;
+    margin: 0 25px;
+    border-radius:50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc,
+    0 0 500px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s /var(--i));
+}
+.bubble span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75,
+    0 0 500px #ff2d75;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+}
+#initial-heading{
+    font-size: 10em;
+    color: rgb(255, 255, 255);
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    outline: none;
+    width: 100%;
+    text-shadow:10px 10px 0 #3b3b98;
+}
+.animation-main-div{
+    display: none;
+    animation:chMainDiv 10s ;
+}
+@keyframes chMainDiv{
+    from{
+        display: none;
+    }
+    to{
+        display: block;
+    }
+}
+.navbar-custom{
+    height: 7rem;
+    border-radius: 0rem 0rem 0.7rem 0.7rem;
+    background-image: linear-gradient(45deg,#333397,rgb(150, 203, 255));
+    position: sticky;
+    box-shadow: 5px 3px rgb(182, 182, 182);
+}
+.navbar-custom div{
+    /* border: 2px solid red; */
+    margin: 0rem 1rem;
+}
+.navbar-custom div span{
+    color: aliceblue;
+    font-size: 2.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+.card{
+    width: 20%;
+    height:30rem;
+  transition: 2s;
+  margin: 0px 0.4px;
+}
+#div-in-main-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:3rem;
+}
+.swipe{
+    margin: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-style: none;
+    border-radius: 50%;
+    background: rgb(126, 126, 126);
+}
+.arrow{
+    font-size: 2rem;
+    color: white;
+}
+.slider{
+    width: 45rem;
+    height: 30rem;
+    overflow: hidden;
+}
+.slides{
+    width: 500%;
+    height: 30rem;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.navigation-manual{
+    position: absolute;
+    width: 1500px;
+    margin-top:-40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn{
+    border:2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    transition:1s;
+    cursor: pointer;
+
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: blue;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.card button{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 100%;
+    transition: 0.5s;
+}
+.card button:hover{
+    background-color: #72aef3;
+    width: 3rem;
+    height: 3rem;
+}
+.card button:nth-child(1){
+    top: 60%;
+    left: 45%;
+}
+.card button:nth-child(2){
+    top: 45%;
+    left: 30%;
+}
+.card button:nth-child(3){
+    top: 30%;
+    left: 85%;
+}
+.card button:nth-child(4){
+    top: 20%;
+    left: 40%;
+}
+.card button:nth-child(5){
+    top: 10%;
+    left: 18%;
+}
+.card button:nth-child(6){
+    top: 38%;
+    left: 65%;
+}
+.card button:nth-child(7){
+    top: 20%;
+    left: 60%;
+}
